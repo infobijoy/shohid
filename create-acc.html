@@ -74,20 +74,44 @@
                 <a href="./log-in.html" class="btn btn-danger">Log In</a>
                 <a href="./create-acc.html" class="btn btn-danger">Create Account</a>
             </div>
-            <h1 class=" text-center border border-danger bg-danger-subtle text-danger rounded">শহীদের তালিকা</h1>
-            <div class="row row-cols-2 row-cols-md-4 row-cols-lg-5 g-4">
-                <div class="col">
-                    <div class="card border-danger bg-danger-subtle">
-                        <img src="https://www.darwinchambers.com/wp-content/uploads/demo-img.jpg" class="card-img-top"
-                            alt="...">
-                        <div class="card-body bg-danger-subtle p-2">
-                            <h5 class="card-title bg-danger-subtle">Name</h5>
-                            <p class="card-text bg-danger-subtle">College nama and full address</p>
-                        </div>
-                        <a href="./shohid-info.html" class="btn btn-danger rounded-top-0">More info</a>
-                    </div>
+            <h1 class=" text-center border border-danger bg-danger-subtle text-danger rounded">Create Account</h1>
+
+            <form action="create_account.php" method="post">
+                <div class="form-group">
+                    <label for="name">নাম</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
                 </div>
-            </div>
+                <div class="form-group">
+                    <label for="email">ইমেইল</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">মোবাইল</label>
+                    <input type="text" class="form-control" id="mobile" name="mobile" required>
+                </div>
+                <div class="form-group">
+                    <label for="fulladdress">সম্পূর্ণ ঠিকানা</label>
+                    <input type="text" class="form-control" id="fulladdress" name="fulladdress" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">পাসওয়ার্ড</label>
+                    <span class="show-password" onclick="togglePassword()">👁️</span>
+                    <input type="password" class="form-control" id="password" name="password" minlength="6" required>
+                </div>
+                <button type="submit" class="btn btn-danger col-12 my-2">অ্যাকাউন্ট তৈরি করুন</button>
+            </form>
+            <script>
+                function togglePassword() {
+                    var passwordField = document.getElementById("password");
+                    var passwordFieldType = passwordField.type;
+
+                    if (passwordFieldType === "password") {
+                        passwordField.type = "text";
+                    } else {
+                        passwordField.type = "password";
+                    }
+                }
+            </script>
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

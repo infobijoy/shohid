@@ -21,3 +21,9 @@
   background-color: #f5c6cb;
   color: #721c24;
 }
+.show-password {
+  cursor: pointer;
+  position: absolute;
+  right: 25px;
+  margin-top: 32px;
+}

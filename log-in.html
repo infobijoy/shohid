@@ -74,20 +74,18 @@
                 <a href="./log-in.html" class="btn btn-danger">Log In</a>
                 <a href="./create-acc.html" class="btn btn-danger">Create Account</a>
             </div>
-            <h1 class=" text-center border border-danger bg-danger-subtle text-danger rounded">শহীদের তালিকা</h1>
-            <div class="row row-cols-2 row-cols-md-4 row-cols-lg-5 g-4">
-                <div class="col">
-                    <div class="card border-danger bg-danger-subtle">
-                        <img src="https://www.darwinchambers.com/wp-content/uploads/demo-img.jpg" class="card-img-top"
-                            alt="...">
-                        <div class="card-body bg-danger-subtle p-2">
-                            <h5 class="card-title bg-danger-subtle">Name</h5>
-                            <p class="card-text bg-danger-subtle">College nama and full address</p>
-                        </div>
-                        <a href="./shohid-info.html" class="btn btn-danger rounded-top-0">More info</a>
-                    </div>
+            <h1 class=" text-center border border-danger bg-danger-subtle text-danger rounded">Log in</h1>
+            <form action="login.php" method="post">
+                <div class="form-group">
+                    <label for="email_or_mobile">ইমেইল বা মোবাইল</label>
+                    <input type="text" class="form-control" id="email_or_mobile" name="email_or_mobile" required>
                 </div>
-            </div>
+                <div class="form-group">
+                    <label for="password">পাসওয়ার্ড</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-danger col-12 mt-2">লগ ইন</button>
+            </form>
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
